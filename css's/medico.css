@@ -1,0 +1,12 @@
+table{
+    background-color: whitesmoke;
+    }
+    td{
+    background-color: hsl(0, 0%, 90%)
+    }
+    th{
+    background-color: hsl(240, 70%, 60%);
+    }
+    .f{
+        text-align: center;
+    }
