@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Tabelas com Vários Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Altura total da janela */
+            overflow: hidden; /* Evita barras de rolagem */
+        }
+
+        .carousel-wrapper {
+            width: 100%; /* Largura total */
+            height: 100%; /* Altura total */
+            position: relative;
+            overflow: hidden;
+            border: none; /* Remover borda */
+            border-radius: 0; /* Remover borda arredondada */
+            box-shadow: none; /* Remover sombra */
+            background-color: #fff;
+        }
+
+        iframe {
+            width: 100%; /* Largura total */
+            height: 100%; /* Altura total */
+            border: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        iframe.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-wrapper">
+        <!-- Iframe que vai carregar os diferentes arquivos index.html -->
+        <iframe id="iframe" src="htmls/test.html" class="visible"></iframe>
+    </div>
+
+    <script>
+        const iframe = document.getElementById("iframe");
+        const pages = ["htmls/filmin.html", "htmls/paises.html"]; // Listagem dos arquivos
+        let currentPage = 0;
+
+        function loadNextPage() {
+            // Remove a classe 'visible' para a transição
+            iframe.classList.remove('visible');
+
+            // Aguarda a transição de saída antes de carregar a nova página
+            setTimeout(() => {
+                currentPage = (currentPage + 1) % pages.length; // Calcula o próximo index
+                iframe.src = pages[currentPage]; // Carrega a próxima página
+
+                // Após carregar a nova página, re-aplica a classe 'visible' para a transição de entrada
+                iframe.onload = () => iframe.classList.add('visible');
+            }, 1000); // Tempo para a transição de saída (1 segundo)
+        }
+
+        // Troca a cada 5 segundos
+        setInterval(loadNextPage, 5000);
+    </script>
+
+</body>
+</html>
+
+

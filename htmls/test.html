@@ -5,21 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turma 5 curso de Direito</title>
-    <link rel="stylesheet" href="css's/medico.css">
+    <style>
+        table {
+            width: 100vw;
+            height: 100%; 
+            margin-left: auto;
+            margin-right: auto;
+            background-color: whitesmoke;
+            border-collapse: collapse; /* Adiciona colapso de borda */
+        }
+
+        td {
+            background-color: hsl(0, 0%, 90%);
+            padding: 10px; /* Adiciona preenchimento para as células */
+            border: 1px solid #ccc; /* Adiciona borda às células */
+        }
+
+        th {
+            background-color: hsl(240, 70%, 60%);
+            padding: 10px; /* Adiciona preenchimento para as células de cabeçalho */
+            border: 1px solid #ccc; /* Adiciona borda às células de cabeçalho */
+        }
+
+        .f {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <table style="width: 60vw; margin-left: auto; margin-right: auto;">
+    <table>
         <tr>
             <th>Turma</th>
             <th>Curso</th>
             <th>Turno</th>
             <th>Professor</th>
             <th>Sala</th>
-            <th>Horario</th>
+            <th>Horário</th>
         </tr>
         <tr>
-            <td rowspan="4"> T1</td>
+            <td rowspan="4">T1</td>
             <td>Matemática Computacional</td>
             <td>Manhã</td>
             <td>Dr. Silva</td>
@@ -34,7 +59,6 @@
             <td>15:30</td>
         </tr>
         <tr>
-
             <td>Física Quântica</td>
             <td>Noite</td>
             <td>Dr. Santos</td>
@@ -42,7 +66,7 @@
             <td>10:00</td>
         </tr>
         <tr>
-            <td>Quimica Analitica</td>
+            <td>Química Analítica</td>
             <td>Manhã</td>
             <td>Dr. Costa</td>
             <td>301</td>
@@ -50,7 +74,7 @@
         </tr>
         <tr>
             <td rowspan="3">T2</td>
-            <td>Introdução a Programação</td>
+            <td>Introdução à Programação</td>
             <td>Tarde</td>
             <td>Dr. Souza</td>
             <td>203</td>
@@ -64,15 +88,16 @@
             <td>14:00</td>
         </tr>
         <tr>
-        <td>Estatisticas Basicas</td>
-        <td>Manhã</td>
-        <td>Dr. Silva</td>
-        <td>203</td>
-        <td>14:00</td>
-    </tr>
-<tr>
-    <td class="f" colspan="6">Aulas de segunda a sexta feira, com duração de 1h30!</td>
-</tr>
+            <td>Estatísticas Básicas</td>
+            <td>Manhã</td>
+            <td>Dr. Silva</td>
+            <td>203</td>
+            <td>14:00</td>
+        </tr>
+        <tr>
+            <td class="f" colspan="6">Aulas de segunda a sexta-feira, com duração de 1h30!</td>
+        </tr>
+    </table>
 </body>
 </html>
 
